@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Room</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+	<center>
+		<h1 class="header">	
+			CHAT	
+			<sup>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEX///8ArEdbuXQAgy1Ttm6r2bZevHcmkUMAgSwAokHh9uoAqkEApzhrw4MAkDZPtWvb7+BLvHBzyI58zpiX0KWf1K2OzJ1av3ny+fQApjPC48rN6NR+x5G85co7oljn9+43uGRjvHvV7Nvs9++l3LgrmEpNr2gTijfL69YeslaW1quG0Z+z3b4AmDtwwYUAijEktl49uWgNu/3/AAADnElEQVR4nO3di1biMBSF4ZZWrSYYVESKykW8ITrDvP/LTcXlmjVjKSfFnYTM/p+Ab+UEitgmSRhjjDHGGGOMMcYYY8xtw97owHGvo54736Q/MyZ3nTGzSzfI4cDkHT/lZjDEA69zX761Mb9DA0fGo+89c40FXvsGVkToKs59TuhnOXIv3gQhHOCAPf8z+p6ZwISDEJawWsQ+Cjj0TftshtqJgQxpNaaoa5vXMIa0Eo5AwstQhPkBhRRS6DsKKdxYn0JXUUghhf6jkEIK/Uchhf+xMJA/l1JIIYUhRGHr+p1DSC6FvfuL7tW6bk3jI0QP48eOJbK18H6qtGroZ5EBKorsaWxnbCl8XmiVNnaKAH4os7ENsZ3wpdziQwor4wNauNTbfFhhVhzJV7GN8FIAxAqrVRQTWwjvSgEQLMyKR6BwunUPOhBmGU54K5lRvLCQvqHaC69ES4hfwyfUGk5EPgdC6U60Fj7LhtSBUDim1sKXYITCDwxr4YVsG+KFmfBTn0IKKaSQQgoppJBCCimk0IvwnEIKKaSQQgoppJBCCimkkEIKKaSQQgoppJBCCincE2GXQgoppJBCCiMUvoKEb5B711oIrZ8qKBUehyLM5yBhigZKhT8sgXIhfCPKhNbbUC6Ej6lQaP2AVrEwPQUTRUJjvYQWwjTDEiXC3HoXWgmPsUSBMJ/ZvpHaCSuiX2EroJUwTTH3rAuF5qbVY6DthOkbblKbhbnptnxEsqWwGtXTAtORaSgftD4WwVq4ViLqnPQ21mb/7SREpLo7KCgMIgop3Nhh9ELhAwfwUUghhf6jkEIK/UchhRT6j0IKKfQfhRRS6D91HrtQv0QvRJ25HYxwgToFNxQhbBsGI9Sw06jPwhDqCxQwEKFawYBhCFV6ErdQLXBHwocgVPoK9UERglCpcnqL9ImFSmNaLZ+xPqlQTU8QIbefnVDBLqkcJBGqxS7/k+Q7gVCt9hkoEKrVHo9oIhCqdK9XcLsQe73hoi1ClfZ8v8JdaxZGAGwWKg2/4sDXJFQqAmCTUKUxABuFUQAbhDHswfc2CiNZwc1CDf5e6q4NwtL+LrhQqxeW975f1/dVK9QRAZNfNcKogHWnH8Y0okmdMDLgV2FcI5p8FZZL36/ou/vnnabE/crlq7/vewL+jOetAx05MBku/iyihv2W7rVRGTkwSW7V+lx1FeWIfjRZTpVedGP5PljffL7ff7lnjDHGGGOMMSbtN55QA0XsjAnlAAAAAElFTkSuQmCC">
+			</sup>
+		</h1>
+		<h3 id="user_name" class="color_white"></h3>
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
+			<input type="text" id="room_name" class="form-control" placeholder="#Room Name">
+		</div>
+		<button onclick="addRoom();" class="btn btn-success">#Add Room</button>
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+	<div id="output"></div>
+	</center>
+</div>
+<script src="kwitter_room.js"></script>
+</body>
+</html>
